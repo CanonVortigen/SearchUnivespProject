@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	
+	<%- include("inc/head") -%>
+    
+	<body>
+		<%- include("inc/header-menu") -%>
+		<main id="result">	
+			<div>
+				<div style="padding: 10px;">
+					<canvas id="chart" style="height: 350px;"></canvas>
+				</div>	
+
+				<div style="padding: 10px;">
+					<canvas id="charts" style="height:350px;"></canvas>
+				</div>	
+			</div>
+
+		</main>
+		<%- include("inc/footer") -%>
+		<%- include("inc/footer-scripts") -%>	
+
+	</body>	
+
+
+</html>
+
+<script>
+	let grafico = new Chart (document.querySelector("#chart").getContext("2d"), {			
+		type:'doughnut',
+		data: {},
+		options:{ 
+			maintainAspectRatio: false,
+			tooltips:{				
+				mode:'index',
+				intersect:false
+			},
+			scales:{
+				xAxes:[{
+					display: true,
+					scaleLabel:{
+						display: true,
+						labelString: 'Setor Investimento'
+					}
+				}],
+				yAxes:[{
+					display: true,
+					scaleLabel:{
+						display: true,
+						labelString: 'Total'
+					}
+				}]				
+		
+			}
+
+		}
+		
+	});
+
+	fetch(`/search/chart${window.location.search}`)
+	.then(response => response.json())
+	.then(json => {
+		
+		grafico.data = {
+			labels: json.pesquisagerais,
+			datasets:[{
+				data: json.totais,
+				label:'Pesquisa sobre a cidade',
+				backgroundColor: [
+					'rgba(54, 162, 235, 1)',
+					'rgba(0, 255, 255, 1)',
+					'rgba(127, 255, 212, 1)',
+					'rgba(210, 105, 30, 1)',
+					'rgba(0, 0, 255, 1)',
+					'rgba(165, 42, 42, 1)',
+					'rgba(127, 255, 0, 1)',
+					'rgba(169, 169, 169, 1)'
+				],
+                borderColor: [
+					'rgba(54, 162, 235, 1)',
+					'rgba(0, 255, 255, 1)',
+					'rgba(127, 255, 212, 1)',
+					'rgba(210, 105, 30, 1)',
+					'rgba(0, 0, 255, 1)',
+					'rgba(165, 42, 42, 1)',
+					'rgba(127, 255, 0, 1)',
+					'rgba(169, 169, 169, 1)'
+				],
+				
+				fill: true,
+				pointBackgroundColor: '#FFF'               			
+            
+			}]
+		};
+
+		grafico.update();
+
+	});
+
+</script>	
+
+<script>
+	let graficos = new Chart (document.querySelector("#charts").getContext("2d"), {			
+		type:'bar',
+		data: {},
+		options:{ 
+			maintainAspectRatio: false,
+			tooltips:{				
+				mode:'index',
+				intersect:false
+			},
+			scales:{
+				xAxes:[{
+					display: true,
+					scaleLabel:{
+						display: true,
+						labelString: 'Setor Investimento'
+					}
+				}],
+				yAxes:[{
+					display: true,
+					scaleLabel:{
+						display: true,
+						labelString: 'Total'
+					}
+				}]				
+		
+			}
+
+		}
+		
+	});
+
+	fetch(`/search/chart${window.location.search}`)
+	.then(response => response.json())
+	.then(json => {
+		
+		graficos.data = {
+			labels: json.pesquisagerais,
+			datasets:[{
+				data: json.totais,
+				label:'Pesquisa sobre a cidade',
+				backgroundColor: [
+					'rgba(54, 162, 235, 1)',
+					'rgba(0, 255, 255, 1)',
+					'rgba(127, 255, 212, 1)',
+					'rgba(210, 105, 30, 1)',
+					'rgba(0, 0, 255, 1)',
+					'rgba(165, 42, 42, 1)',
+					'rgba(127, 255, 0, 1)',
+					'rgba(169, 169, 169, 1)'
+				],
+                borderColor: [
+					'rgba(54, 162, 235, 1)',
+					'rgba(0, 255, 255, 1)',
+					'rgba(127, 255, 212, 1)',
+					'rgba(210, 105, 30, 1)',
+					'rgba(0, 0, 255, 1)',
+					'rgba(165, 42, 42, 1)',
+					'rgba(127, 255, 0, 1)',
+					'rgba(169, 169, 169, 1)'
+				],
+				
+				fill: true,
+				pointBackgroundColor: '#FFF'               			
+            
+			}]
+		};
+
+		graficos.update();
+
+	});
+
+</script>	
+
+
+
+
+

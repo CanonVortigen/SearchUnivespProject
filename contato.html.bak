@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto:wght@700&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <title>Projeto Integrador III</title>
+    <link rel="stylesheet" href="/assests/css/reset.css">
+    <link rel="stylesheet" href="/assests/css/style.css">
+</head>
+    
+<body>
+    <header class="cabecalho">
+        <nav>
+            <a href="/" class="logo">Projeto Integrador III - Contato</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="pesquisa.html">Pesquisa</a></li>
+                <li><a href="resultado.html">Resultado</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main></main>
+    <footer>
+		<div class="main-content">
+			<div class="left box">
+				<h2> Sobre nós</h2>
+				<div class="content">
+					<p>Somos estudantes da Univesp dos cursos de Engenharia da Computação, Ciência de Dados e Tecnologia da Informação.</p>
+				
+					<div class="social">
+						<a href="#"><span class="fab fa-facebook-f"></span></a>
+						<a href="#"><span class="fab fa-twitter"></span></a>
+						<a href="#"><span class="fab fa-instagram"></span></a>
+						<a href="#"><span class="fab fa-youtube"></span></a>
+					</div>
+				</div>
+			</div><!--left box-->
+			<div class="center box">
+				<h2>Endereço</h2>
+				<div class="content">
+					<div class="place">
+						<span class="fas fa-map-marker"></span>
+						<span class="text">R. Miguel Gomes,  Igaraçu do Tietê-SP</span>
+					</div>
+
+					<div class="phone">
+						<span class="fas fas fa-phone-alt"></span>
+						<span class="text">+55 14 98135-5471</span>
+					</div>
+
+					<div class="email">
+						<span class="fas fa-envelope"></span>
+						<span class="text">208909@aluno.univesp.br</span>
+					</div>
+				</div>
+			</div>
+			<div class="right box">
+				<h2>Contato</h2>
+				<div class="content">
+					<form action="#">
+						<div class="email">
+							<div class="text">Email *</div>
+							<input type="email" required placeholder="Digite seu e-mail">
+						</div>
+						<div class="msg">
+							<div class="text">Mensagem *</div>
+							<textarea rows="2" cols="25" required placeholder="Digite sua mensagem"></textarea>
+						</div>
+						<div class="btn">
+							<button type="submit">Enviar</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div><!--main-content-->
+		
+	</footer>
+	<script src="https://kit.fontawesome.com/bed791372a.js" crossorigin="anonymous"></script>
+    <script src="assests/script/mobile-navbar.js"></script>
+</body>
+</html>

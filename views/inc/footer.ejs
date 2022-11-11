@@ -1,0 +1,96 @@
+<footer>
+    <div class="main-content">
+        <div class="left box">
+            <h2> Sobre nós</h2>
+            <div class="content">
+                <p>Somos estudantes da Univesp dos cursos de Engenharia da Computação, Ciência de Dados e Tecnologia da Informação.</p>
+            
+                <div class="social">
+                    <a href="https://www.facebook.com/"><span class="fab fa-facebook-f"></span></a>
+                    <a href="https://twitter.com/?lang=en"><span class="fab fa-twitter"></span></a>
+                    <a href="https://www.instagram.com/"><span class="fab fa-instagram"></span></a>
+                    <a href="https://www.youtube.com/watch?v=YYScJwvlFog"><span class="fab fa-youtube"></span></a>
+                </div>
+            </div>
+        </div><!--left box-->
+        <div class="center box">
+            <h2>Endereço</h2>
+            <div class="content">
+                <div class="place">
+                    <span class="fas fa-map-marker"></span>
+                    <span class="text">R. Miguel Gomes,  Igaraçu do Tietê-SP</span>
+                </div>
+
+                <div class="phone">
+                    <a href="https://criarmeulink.com.br/u/1665855905"
+                    target="_blank"><span class="fas fas fa-phone-alt"></span></a>
+                    <span class="text">+55 14 98135-5471</span>
+                </div>
+
+                <div class="email">
+                    <a href=""><span class="fas fa-envelope"></span></a>
+                    <span class="text">208909@aluno.univesp.br</span>
+                </div>
+            </div>
+        </div>
+        <div class="right box">
+            <h2>Contato Teste</h2>
+            <p id="my-form-status"></p>
+            <div class="content">
+                <form id="my-form" action="https://formspree.io/f/mvoyqjbb" method="POST">
+                    <div class="email">
+                      <label for="email"> E-mail:</label>
+                        <input class="right" type="email" name="email" required placeholder="Digite seu e-mail">
+                    </div>
+                    <div class="msg">
+                        <label for="message"> Mensagem:</label>
+                        <textarea class="right" type="text" name="message" rows="2" cols="25" required placeholder="Digite sua mensagem"></textarea>
+                    </div>
+                    <div class="btn">
+                        <input id="my-form-button" type="submit" value="Enviar">                        
+                    </div>                   
+                </form>
+            </div>
+        </div>
+    </div><!--main-content-->  
+    
+</footer>
+
+<script>
+
+    var form = document.getElementById("my-form");  
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+
+          alert("Mensagem enviada com sucesso!");
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+
+              alert("Oops! Ocorreu um problema ao enviar seu formulário!")
+
+            }
+          })
+        }
+      }).catch(error => {
+
+        alert("Oops! Ocorreu um problema ao enviar seu formulário!")
+
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
+

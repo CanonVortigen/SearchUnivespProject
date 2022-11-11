@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assests/css/style.css">
+	<link rel="stylesheet" href="assests/css/pesquisa.css">
+	<title>Pesquisa Sobre a Saúde</title>
+</head>
+
+<body>
+	<div>
+		<form action="#" onsubmit="return false" method="get" name="Pesquisa Saude">
+			<div>
+				<h1>Pesquisa Sobre a Saúde</h1>
+			</div>
+			<fieldset class="grupo">
+
+				<h3>Informe seu CEP</h3>
+				<div class="campo">
+					<label for="cep">Cep</label>
+					<input type="tel" placeholder="Informe o Cep" id="cep" name="cep" autofocus required>
+				</div>
+				<div class="campo">
+					<label for="cidade">Cidade</label>
+					<input type="text" placeholder="Informe a cidade" id="cidade" name="cidade">
+				</div>
+			</fieldset>
+			<fieldset class="grupo">
+				<div class="campo">
+					<label for="uf">UF</label>
+					<input type="text" placeholder="UF" name="uf" id="uf">
+				</div>
+				<div class="campo">
+					<label for="bairro">Bairro</label>
+					<input type="text" placeholder="Informe o Bairro" name="bairro" id="bairro">
+				</div>
+			</fieldset>
+			<fieldset>
+				<div>
+					<h3>Informe seu sexo</h3>
+					<input type="radio" id="masculino" name="sexo" value="M">
+					<label for="masculino">Masculino</label>
+					<input type="radio" id="feminino" name="sexo" value="F">
+					<label for="feminino">Feminino</label>
+					<input type="radio" id="prefiro_nao_dizer" name="sexo" value="N">
+					<label for="prefiro_nao_dizer">Prefiro não dizer</label>
+				</div>
+				<div class="campo"><br>
+					<h3>Informe sua idade</h3>
+					<label for="idade">Idade</label>
+					<input type="number" placeholder="Informe sua idade" name="idade" id="idade">
+				</div>
+				<div>
+					<h3>Informe sua renda famíliar</h3>
+					<input type="radio" id="classe_a" name="classe_social" value="classe A">
+					<label for="classe_a">Acima de 20 salários mínimos</label><br>
+					<input type="radio" id="classe_b" name="classe_social" value="classe B">
+					<label for="classe_b">De 10 a 20 salários mínimos</label><br>
+					<input type="radio" id="classe_c" name="classe_social" value="classe C">
+					<label for="classe_c">De 4 a 10 salários mínimos</label><br>
+					<input type="radio" id="classe_d" name="classe_social" value="classe D">
+					<label for="classe_d">De 2 a 4 salários mínimos</label><br>
+					<input type="radio" id="classe_e" name="classe_social" value="classe E">
+					<label for="classe_e">Recebe até 2 salários mínimos</label><br>
+				</div>
+
+			</fieldset>
+			<h3></h3>
+			<fieldset>
+				<div><br>
+					<h3>Em média, quantas vezes ao ano você utiliza os serviços da área da saúde da cidade de Igaraçu do
+						Tietê?</h3>
+					<input type="radio" id="nunca_utilizei" name="utilizacao" value="nunca utilizei">
+					<label for="nunca_utilizei">Nunca utilizei</label><br>
+					<input type="radio" id="1_a_4" name="utilizacao" value="1 a 4">
+					<label for="1_a_4">De 1 a 4 vezes por ano</label><br>
+					<input type="radio" id="4_a_9" name="utilizacao" value="5 a 9">
+					<label for="5_a_9">De 5 a 9 vezes por ano</label><br>
+					<input type="radio" id="10_ou_mais" name="utilizacao" value="10 ou mais">
+					<label for="10_ou_mais">10 vezes ou mais por ano</label><br>
+				</div>
+				<div class="campo"><br>
+					<h3>Sobre os serviços prestados pela área da saúde:</h3>
+					<table>
+						<tbody>
+							<tr>
+								<th></th>
+								<th>Ótimo</th>
+								<th>Bom</th>
+								<th>Regular</th>
+								<th>Razoável</th>
+								<th>Péssimo</th>
+							</tr>
+							<tr>
+								<td>Fornecimento de remédios</td>
+								<td><input type="radio" id="otimo" name="fornRemedios" value="ótimo"></td>
+								<td><input type="radio" id="bom" name="fornRemedios" value="bom"></td>
+								<td><input type="radio" id="regular" name="fornRemedios" value="regular"></td>
+								<td><input type="radio" id="razoavel" name="fornRemedios" value="razoável"></td>
+								<td><input type="radio" id="pessimo" name="fornRemedios" value="péssimo"></td>
+							</tr>
+							<tr>
+								<td>Quantidade de médicos</td>
+								<td><input type="radio" id="otimo" name="qntMedicos" value="ótimo"></td>
+								<td><input type="radio" id="bom" name="qntMedicos" value="bom"></td>
+								<td><input type="radio" id="regular" name="qntMedicos" value="regular"></td>
+								<td><input type="radio" id="razoavel" name="qntMedicos" value="razoável"></td>
+								<td><input type="radio" id="pessimo" name="qntMedicos" value="péssimo"></td>
+							</tr>
+							<tr>
+								<td>Qualidade do atendimento</td>
+								<td><input type="radio" id="otimo" name="qldAtendimento" value="ótimo"></td>
+								<td><input type="radio" id="bom" name="qldAtendimento" value="bom"></td>
+								<td><input type="radio" id="regular" name="qldAtendimento" value="regular"></td>
+								<td><input type="radio" id="razoavel" name="qldAtendimento" value="razoável"></td>
+								<td><input type="radio" id="pessimo" name="qldAtendimento" value="péssimo"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</fieldset>
+			<button class="botao" type="submit"><a href="index.html">Enviar</a></button>
+
+
+		</form>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.0.0.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"
+		type="text/javascript"></script>
+	<script type="text/javascript" src="assests/script/busca-cep.js"></script>
+
+
+</body>
+
+</html>

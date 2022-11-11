@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	
+	<%- include("inc/head") -%>		
+    
+<body id="principal">
+	<%- include("inc/header-menu") -%>
+    <main id="principal">
+		<div id="topo"></div>
+		<h1 class="topo">Entre em contato conosco</h1>
+
+        <div id="alerts">
+            <%- include('inc/alerts') -%>
+        </div>   
+         
+        <div class="jumboto">
+            <form name="meu_form" class="data-ax-form" action="/contact" method="post">  
+                <fieldset> 
+                    <legend></legend>         
+                    <p class="nome">
+                    <label class="label">Nome:</label>    
+                    <input class="space" type="text" id="nomeid" placeholder="Digite o nome" name="name" value="<%= body.name %>" />
+                    <label for="nome"></label>
+                    </p>
+                    <p class="fone">
+                    <label class="label">Telefone:</label>      
+                    <input class="space" type="text" id="foneid" placeholder="Digite o telefone" name="phone" value="<%= body.phone %>" />
+                    <label for="fone"></label>
+                    </p>
+                    <p>
+                    <label class="label">E-mail:</label>  
+                    <input  class="space" type="email" id="emailid" placeholder="Digite o seu email" name="email" value="<%= body.email %>" />
+                    <label for="email"></label>
+                    </p>
+                    <p>
+                    <label class="label">Mensagem:</label>  
+                    <textarea  class="space"  name="message" id="message" placeholder="Deixe sua mensagem"><%= body.message %></textarea>
+                    </p>                    
+                    <p class="submit"> <input type="submit" onclick="Enviar();" value="Enviar" />
+                    </p>
+                </fieldset>
+            </form>
+        </div>
+	</main>
+	<%- include("inc/footer") -%>
+	<%- include("inc/footer-scripts") -%>
+</body>
+</html>

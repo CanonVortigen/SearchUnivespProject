@@ -1,0 +1,104 @@
+#principal {
+    padding: 20px;
+    margin: 20px;
+    background-color: #000066;
+}
+
+form {
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 15px;
+    max-width: 700px;
+}
+
+h1 {
+    margin-left: -160px;
+    padding: 30px;
+}
+
+.jumboto input,
+.jumboto textarea {
+    width: 500px;
+    padding: 15px;
+    color: black;
+    margin-left: 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid;
+    text-transform: uppercase;   
+}
+
+.jumboto input:hover,
+.jumboto textarea:hover,
+.jumboto input:focus,
+.jumboto textarea:focus {
+    border-color: #000066;
+    box-shadow: 5px 0px 9px #FFFF00;
+    background-color: #66FFFF;
+    color: black;
+    font-weight: bold;
+}
+
+.submit input { 
+    color: var(--branco);   
+    border-color: var(--azul_claro);
+    background: var(--laranja_escuro);
+    height: 40px;
+    width: 300px;
+    font-weight: 500; 
+    font-size: 17px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid;    
+    margin-left: 125px;
+    cursor: pointer;
+    transition: .3s;
+    text-align: center;
+}
+
+.jumboto textarea {
+    width: 500px;
+    height: 120px;
+    line-height: 20px;
+    max-width: 500px;
+}
+
+form label {
+    margin-left: 20px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.topo {
+    color: whitesmoke;
+    font-size: 48px;
+    text-align: center;
+}
+
+#topo {
+    background: url('../imagens/publicidade.jpg') no-repeat center;
+    width: 100%;
+    height: 300px;
+
+}
+
+.data-ax-form {
+    margin: auto auto;
+    padding: 50px
+}
+
+#alerts {   
+    margin: 0 auto 0 31%;
+    color: green;
+    font-size: 30px;   
+    width: 45%;   
+   
+}
+
+.space {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+}

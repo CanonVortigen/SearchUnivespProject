@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<%- include("inc/head-search") -%>
+
+<body>
+	<%- include("inc/header-menu") -%>
+	
+		<main id="principal">
+			
+			<form name="meu_form" class="data-ax-form" action="/search" method="post" >
+
+				<div id="alerts" style="padding: 10px 0px; text-transform: uppercase; color: green;">
+					<%- include('inc/alerts') -%>
+				</div> 
+
+				<div>
+					<h1 class="">PESQUISA SOBRE A CIDADE</h1>
+				</div>				
+
+				<fieldset class="grupo">								
+					<div class="campo">
+						<label for="cep">Cep</label>
+						<input type="tel" placeholder="Informe o Cep" id="cep" name="cep" autofocus value="<%= body.cep %>">
+					</div>
+					<div class="campo">
+						<label for="cidade">Cidade</label>
+						<input type="text" placeholder="Informe a cidade" id="cidade" name="cidade" value="<%= body.cidade %>">
+					</div>
+				</fieldset>
+				<fieldset class="grupo">
+					<div class="campo">
+						<label for="uf">UF</label>
+						<input type="text" placeholder="UF" name="uf" id="uf" value="<%= body.uf %>">
+					</div>
+					<div class="campo">
+						<label for="bairro">Bairro</label>
+						<input type="text" placeholder="Informe o Bairro" name="bairro" id="bairro" value="<%= body.bairro %>">
+					</div>
+				</fieldset>
+				<fieldset>
+					<div>
+						<h3>Informe seu sexo:</h3>
+						<input type="radio" id="masculino" name="sexo" value="M">
+						<label for="masculino">Masculino</label>
+						<input type="radio" id="feminino" name="sexo" value="F">
+						<label for="feminino">Feminino</label>
+						<input type="radio" id="prefiro_nao_dizer" name="sexo" value="N">
+						<label for="prefiro_nao_dizer">Prefiro não dizer</label>
+					</div>
+					<div class="campo">
+						<div>
+							<h3>Informe sua faixa etária:</h3>
+							<label for="classe_a"><input type="radio" id="classe_a" name="classesocial" value="classe A">Acima de 60 anos</label>
+							<label for="classe_b"><input type="radio" id="classe_b" name="classesocial" value="classe B">De 30 a 59 anos</label>
+							<label for="classe_c"><input type="radio" id="classe_c" name="classesocial" value="classe C">De 19 a 29 anos</label>
+							<label for="classe_e"><input type="radio" id="classe_e" name="classesocial" value="classe E">Até 18 anos</label>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset>
+					<div class="campo">
+						<h3>Qual setor precisa mais de investimento?</h3>
+						<label for="saude"><input type="radio" id="saude" name="pesquisageral" value="saude">Saúde</label>
+						<label for="cultura"><input type="radio" id="cultura" name="pesquisageral" value="cultura">Cultura</label>
+						<label for="educacao"><input type="radio" id="educacao" name="pesquisageral" value="educacao">Educação</label>
+						<label for="lazer"><input type="radio" id="lazer" name="pesquisageral" value="lazer">Lazer</label>
+						<label for="turismo"><input type="radio" id="turismo" name="pesquisageral" value="turismo">Turismo</label>
+						<label for="esporte"><input type="radio" id="esporte" name="pesquisageral" value="esporte">Esporte</label>
+						<label for="meio_ambiente"><input type="radio" id="meio_ambiente" name="pesquisageral" value="meio_ambiente">Meio ambiente</label>
+						<label for="assistencia_social"><input type="radio" id="assistencia_social" name="pesquisageral" value="assistencia_social">Assistência social</label>
+					</div>
+				</fieldset>
+				<input type="submit" class="botao" onclick="Enviar();" value="Enviar" />
+			</form>
+		</div>
+		
+	</main>
+	<%- include("inc/cep-scripts") -%>
+	<%- include("inc/footer") -%>
+	<%- include("inc/footer-scripts") -%>	
+	
+</body>
+
+</html>
